@@ -1,3 +1,11 @@
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.io.*;
+
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -6,6 +14,8 @@ import java.util.regex.Pattern;
 public class PhoneDir {
 
     HashMap<String, String> phoneBook = new HashMap<String, String>();
+    public static final Logger LOGGER = LogManager.getLogger(PhoneDir.class);
+
     static Scanner terminal = new Scanner(System.in);
 
     //addPhone - добавить номер
@@ -69,13 +79,50 @@ public class PhoneDir {
         }
     }
 
+    public void readFile() throws IOException {
+        String fileName = "/home/user/phoneNumber/src/main/Files/inputBook.txt";
+        try {
+            Scanner scanner = new Scanner(new FileReader(fileName));
+            while (scanner.hasNext()){
+                String[] columns = scanner.nextLine().split(":");
+                phoneBook.put(columns[0], columns[1]);
+                //System.out.println(columns[1]);
+            }
+            LOGGER.info("Файл успешно считан!");
+        }catch (Exception e){
+            LOGGER.info("File is not exists!");
+        }
+    }
+
+    public void writeFile(){
+        try{
+            File fileTwo = new File("/home/user/phoneNumber/src/main/Files/writeBook.txt");
+            FileOutputStream fos = new FileOutputStream(fileTwo);
+            PrintWriter pw = new PrintWriter(fos);
+
+            for(Map.Entry<String, String> m :phoneBook.entrySet()){
+                pw.println(m.getKey() + ":" + m.getValue());
+            }
+
+            pw.flush();
+            pw.close();
+            fos.close();
+        }catch(Exception e){}
+    }
+
     //exit - выйти
     public void exit(){
         exit();
     }
 
-    public void inputSwitch(String input){
+    public void inputSwitch(String input) throws IOException{
         switch (input){
+            case ("readFile"):
+                readFile();
+                break;
+            case ("writeFile"):
+                writeFile();
+                break;
             case ("add"):
                 addPhone();
                 break;
@@ -94,8 +141,12 @@ public class PhoneDir {
         }
     }
 
-    public void launch() {
+
+
+    public void launch() throws IOException {
         System.out.println("Доступные действия:\n" +
+                "readFile - Считать список из файла в list\n" +
+                "writeFile - Записать список номеров в файл" +
                 "add - Добавить номер\n" +
                 "del - Удалить номер\n" +
                 "find - Найти запись по номеру\n" +
@@ -110,8 +161,9 @@ public class PhoneDir {
     }
 
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
             PhoneDir phone = new PhoneDir();
             phone.launch();
+            //phone.inputFile();
     }
 }
