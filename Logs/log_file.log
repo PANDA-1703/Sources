@@ -1,0 +1,17 @@
+2022-11-01 12:15:31.249 INFO [main] [PhoneDir.inputFile(PhoneDir.java:94)] - File is not exists!
+2022-11-01 12:17:06.378 INFO [main] [PhoneDir.inputFile(PhoneDir.java:91)] - Файл успешно считан!
+2022-11-01 12:17:06.380 INFO [main] [PhoneDir.inputFile(PhoneDir.java:91)] - Файл успешно считан!
+2022-11-01 12:17:50.254 INFO [main] [PhoneDir.inputFile(PhoneDir.java:91)] - Файл успешно считан!
+2022-11-01 12:17:50.256 INFO [main] [PhoneDir.inputFile(PhoneDir.java:92)] - [Ljava.lang.String;@50ad3bc1
+2022-11-01 12:17:50.257 INFO [main] [PhoneDir.inputFile(PhoneDir.java:91)] - Файл успешно считан!
+2022-11-01 12:17:50.257 INFO [main] [PhoneDir.inputFile(PhoneDir.java:92)] - [Ljava.lang.String;@223aa2f7
+2022-11-01 12:18:31.390 INFO [main] [PhoneDir.inputFile(PhoneDir.java:91)] - Файл успешно считан!
+2022-11-01 12:18:31.393 INFO [main] [PhoneDir.inputFile(PhoneDir.java:91)] - Файл успешно считан!
+2022-11-01 12:20:04.725 INFO [main] [PhoneDir.inputFile(PhoneDir.java:91)] - Файл успешно считан!
+2022-11-01 12:21:14.823 INFO [main] [PhoneDir.inputFile(PhoneDir.java:91)] - Файл успешно считан!
+2022-11-01 12:25:42.044 INFO [main] [PhoneDir.inputFile(PhoneDir.java:91)] - Файл успешно считан!
+2022-11-01 12:26:32.784 INFO [main] [PhoneDir.inputFile(PhoneDir.java:93)] - Файл успешно считан!
+2022-11-01 12:26:59.796 INFO [main] [PhoneDir.inputFile(PhoneDir.java:93)] - Файл успешно считан!
+2022-11-01 12:28:12.976 INFO [main] [PhoneDir.inputFile(PhoneDir.java:93)] - Файл успешно считан!
+2022-11-01 12:40:07.668 INFO [main] [PhoneDir.readFile(PhoneDir.java:91)] - Файл успешно считан!
+2022-11-01 12:41:00.255 INFO [main] [PhoneDir.readFile(PhoneDir.java:91)] - Файл успешно считан!
