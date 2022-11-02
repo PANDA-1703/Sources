@@ -1,7 +1,7 @@
 *.gradle
 *.bat
 README.md
-Logs/
+/Logs
 gradle/
 .idea
 .build
